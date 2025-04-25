@@ -1,8 +1,6 @@
 package com.pluralsight;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class OnlineStoreApp {
@@ -46,9 +44,10 @@ public class OnlineStoreApp {
     }
     public static void createNewInventory(ArrayList<Product> inventory) {
         try {
+            BufferedWriter bufWriter = new BufferedWriter(new FileWriter("src/main/resources/products.csv"));
 
-        } catch () {
-
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
